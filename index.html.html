@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
 :root {
   --cream: #faf8f4;
   --warm: #f3efe7;
@@ -19,7 +19,7 @@
   --accent2: #b5838d;
   --gold: #c9a96e;
 }
-
+ 
 html, body {
   width: 100%; height: 100%;
   background: var(--cream);
@@ -28,7 +28,7 @@ html, body {
   overflow: hidden;
   cursor: none;
 }
-
+ 
 /* Custom cursor */
 #cur {
   width: 8px; height: 8px;
@@ -48,7 +48,7 @@ html, body {
   transform: translate(-50%,-50%);
   transition: all .15s ease;
 }
-
+ 
 /* Background — very subtle warm gradient blobs */
 .bg {
   position: fixed; inset: 0; z-index: 0; overflow: hidden;
@@ -62,11 +62,11 @@ html, body {
 .b1 { width: 600px; height: 600px; background: #d8dff0; top: -150px; left: -100px; animation: drift1 18s ease-in-out infinite; }
 .b2 { width: 500px; height: 500px; background: #e8d8dc; bottom: -100px; right: -80px; animation: drift2 22s ease-in-out infinite; }
 .b3 { width: 350px; height: 350px; background: #e8dfc8; top: 40%; left: 50%; transform: translate(-50%,-50%); animation: drift3 15s ease-in-out infinite; }
-
+ 
 @keyframes drift1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,30px)} }
 @keyframes drift2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-30px,-40px)} }
 @keyframes drift3 { 0%,100%{transform:translate(-50%,-50%)} 50%{transform:translate(-50%,-46%)} }
-
+ 
 /* Layout */
 .page {
   position: fixed; inset: 0; z-index: 10;
@@ -76,13 +76,13 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+ 
 /* Header */
 header {
   display: flex; align-items: center; justify-content: space-between;
   opacity: 0; animation: up .7s ease .05s forwards;
 }
-
+ 
 .logo {
   display: flex; align-items: center; gap: 1rem;
 }
@@ -97,7 +97,7 @@ header {
   transition: all .3s;
 }
 .z-mark:hover { background: var(--ink); color: var(--cream); }
-
+ 
 .logo-name {
   display: flex; flex-direction: column; line-height: 1;
 }
@@ -113,7 +113,7 @@ header {
   letter-spacing: 2px; margin-top: 4px;
   text-transform: uppercase;
 }
-
+ 
 .badge {
   display: flex; align-items: center; gap: 7px;
   font-family: 'DM Mono', monospace;
@@ -130,7 +130,7 @@ header {
   animation: blink 1.6s ease-in-out infinite;
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
-
+ 
 /* Center */
 .center {
   display: flex; align-items: center; justify-content: center;
@@ -138,7 +138,7 @@ header {
   text-align: center;
   gap: 0;
 }
-
+ 
 .kicker {
   font-family: 'DM Mono', monospace;
   font-size: 0.6rem; letter-spacing: 5px;
@@ -151,7 +151,7 @@ header {
   content: ''; display: block;
   width: 40px; height: 1px; background: var(--stone);
 }
-
+ 
 .headline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3.5rem, 8vw, 7rem);
@@ -169,7 +169,7 @@ header {
   color: transparent;
   -webkit-text-stroke: 1.5px #9c9488;
 }
-
+ 
 .sub {
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem; font-weight: 300;
@@ -178,7 +178,7 @@ header {
   margin-top: 2rem;
   opacity: 0; animation: up .7s ease .6s forwards;
 }
-
+ 
 /* Services strip */
 .services {
   display: flex; align-items: center; justify-content: center;
@@ -202,7 +202,7 @@ header {
   width: 3px; height: 3px;
   background: var(--stone); border-radius: 50%;
 }
-
+ 
 /* Progress bar */
 .progress-section {
   margin-top: 3rem;
@@ -227,13 +227,13 @@ header {
   animation: fill 4s cubic-bezier(.25,1,.5,1) forwards;
 }
 @keyframes fill { 0%{width:0%} 100%{width:73%} }
-
+ 
 /* Footer */
 footer {
   display: flex; align-items: flex-end; justify-content: space-between;
   opacity: 0; animation: up .6s ease 1s forwards;
 }
-
+ 
 /* Email form */
 .notify-wrap { display: flex; flex-direction: column; gap: 0.5rem; }
 .notify-label {
@@ -266,7 +266,7 @@ footer {
   font-size: 0.5rem; letter-spacing: 2px;
   color: var(--accent); display: none; text-transform: uppercase;
 }
-
+ 
 /* Clock + socials */
 .right-foot { display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; }
 .clock-line {
@@ -275,9 +275,8 @@ footer {
   color: var(--muted); text-align: right; line-height: 1.8;
   text-transform: uppercase;
 }
-
 .clock-line strong { color: var(--ink); font-weight: 400; }
-
+ 
 .socials { display: flex; gap: 0.6rem; }
 .soc {
   width: 30px; height: 30px;
@@ -288,7 +287,7 @@ footer {
   transition: all .25s;
 }
 .soc:hover { border-color: var(--ink); color: var(--ink); background: var(--warm); }
-
+ 
 /* Decorative serif number — bottom center */
 .deco-num {
   position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
@@ -300,7 +299,7 @@ footer {
   z-index: 5; pointer-events: none;
   user-select: none; line-height: 1;
 }
-
+ 
 /* Thin top rule */
 .top-rule {
   position: fixed; top: 0; left: 0; right: 0;
@@ -308,7 +307,7 @@ footer {
   background: linear-gradient(90deg, transparent, #1a2f5e, #b5838d, transparent);
   z-index: 20; opacity: 0.6;
 }
-
+ 
 /* Floating tag */
 .floating-tag {
   position: fixed; right: 3rem; top: 50%;
@@ -320,40 +319,121 @@ footer {
   z-index: 10; pointer-events: none;
   opacity: 0; animation: fadeIn 1s ease 1.2s forwards;
 }
-
+ 
 @keyframes up { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:none} }
 @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-
+ 
 /* Typewriter in headline */
 #tw { color: var(--accent); font-style: italic; }
-
-@media (max-width: 700px) {
-  .page { padding: 1.5rem; overflow-y: auto; position: static; }
-  html, body { overflow: auto; }
-  .center { padding: 2rem 0; }
+ 
+@media (max-width: 768px) {
+  html, body { overflow-y: auto; height: auto; cursor: auto; }
+  #cur, #cur-ring { display: none; }
+ 
+  .page {
+    position: static;
+    display: flex; flex-direction: column;
+    padding: 1.4rem 1.5rem 2rem;
+    gap: 0; min-height: 100vh;
+  }
+ 
+  header {
+    flex-wrap: wrap; gap: 0.75rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--stone);
+    margin-bottom: 2rem;
+  }
+ 
+  .logo-name span:first-child { font-size: 0.8rem; letter-spacing: 2px; }
+  .badge { font-size: 0.5rem; padding: 5px 10px; }
+ 
+  .center {
+    flex: 1;
+    padding: 0 0 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+ 
+  .kicker {
+    font-size: 0.52rem; letter-spacing: 3px;
+    margin-bottom: 1.4rem;
+    justify-content: flex-start;
+  }
+  .kicker::before { width: 20px; }
+  .kicker::after { display: none; }
+ 
+  .headline {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+    letter-spacing: -0.5px;
+    line-height: 1.02;
+  }
+ 
+  .sub {
+    font-size: 0.82rem;
+    margin-top: 1.4rem;
+    max-width: 100%;
+  }
+  .sub br { display: none; }
+ 
+  .services {
+    flex-wrap: wrap;
+    gap: 0.5rem 0;
+    margin-top: 2rem;
+    justify-content: flex-start;
+  }
+  .svc {
+    font-size: 0.52rem; letter-spacing: 1.5px;
+    padding: 0 1rem;
+  }
+  .svc:first-child { padding-left: 0; }
+ 
+  .progress-section {
+    width: 100%; margin-top: 2rem;
+  }
+ 
+  footer {
+    flex-direction: column; gap: 2rem;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--stone);
+  }
+ 
+  .notify-wrap { width: 100%; }
+  .notify-row { width: 100%; }
+  .notify-row input { width: 100%; flex: 1; font-size: 0.9rem; }
+  .notify-row button {
+    font-size: 0.55rem; padding-left: 0.75rem;
+    white-space: nowrap;
+  }
+ 
+  .right-foot {
+    flex-direction: row; align-items: center;
+    justify-content: space-between; width: 100%;
+  }
+  .clock-line { text-align: left; }
+ 
   .deco-num, .floating-tag { display: none; }
-  footer { flex-direction: column; gap: 2rem; align-items: flex-start; }
-  .right-foot { align-items: flex-start; }
 }
 </style>
 </head>
 <body>
-
+ 
 <div id="cur"></div>
 <div id="cur-ring"></div>
-
+ 
 <div class="top-rule"></div>
 <div class="bg">
   <div class="blob b1"></div>
   <div class="blob b2"></div>
   <div class="blob b3"></div>
 </div>
-
+ 
 <div class="deco-num">73%</div>
 <div class="floating-tag">Mumbai · India · 2025</div>
-
+ 
 <div class="page">
-
+ 
   <header>
     <div class="logo">
       <div class="z-mark">Z</div>
@@ -364,27 +444,27 @@ footer {
     </div>
     <div class="badge"><div class="badge-dot"></div>Under Construction</div>
   </header>
-
+ 
   <div class="center">
     <div class="kicker">Something great is cooking</div>
-
+ 
     <div class="headline">
       We're building<br>
       <em>something</em> <span class="ghost">bold</span>
     </div>
-
+ 
     <p class="sub">
-      A next generation digital agency is taking shape <br>
+      A next-generation digital agency is taking shape —<br>
       lean, sharp, and built to make your brand impossible to ignore.
     </p>
-
+ 
     <div class="services">
       <div class="svc">Web Dev</div>
       <div class="svc">AI Integration</div>
       <div class="svc">UI Design</div>
       <div class="svc">Digital Marketing</div>
     </div>
-
+ 
     <div class="progress-section">
       <div class="prog-row">
         <span>Build progress</span>
@@ -393,7 +473,7 @@ footer {
       <div class="prog-track"><div class="prog-fill"></div></div>
     </div>
   </div>
-
+ 
   <footer>
     <div class="notify-wrap">
       <div class="notify-label">Get early access</div>
@@ -403,7 +483,7 @@ footer {
       </div>
       <div class="notify-ok" id="nok">✓ &nbsp;You're on the list</div>
     </div>
-
+ 
     <div class="right-foot">
       <div class="clock-line">
         <div>Mumbai, India</div>
@@ -419,15 +499,15 @@ footer {
         <a class="soc" href="#" title="X">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.857L1.505 2.25H8.08l4.256 5.625L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
-        <a class="soc" href="https://wa.me/918079767676" title="WhatsApp">
+        <a class="soc" href="#" title="WhatsApp">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
       </div>
     </div>
   </footer>
-
+ 
 </div>
-
+ 
 <script>
 // Cursor
 const cur = document.getElementById('cur');
@@ -444,7 +524,7 @@ document.querySelectorAll('button,a,.svc,.z-mark').forEach(el=>{
   el.addEventListener('mouseenter',()=>{ ring.style.width='48px'; ring.style.height='48px'; ring.style.borderColor='rgba(45,106,79,.5)'; });
   el.addEventListener('mouseleave',()=>{ ring.style.width='32px'; ring.style.height='32px'; ring.style.borderColor='rgba(45,106,79,.3)'; });
 });
-
+ 
 // Clock
 function tick(){
   const d=new Date();
@@ -452,12 +532,12 @@ function tick(){
     [d.getHours(),d.getMinutes(),d.getSeconds()].map(n=>String(n).padStart(2,'0')).join(':');
 }
 tick(); setInterval(tick,1000);
-
+ 
 // Progress
 let p=0;
 const pct=document.getElementById('pct');
 const iv=setInterval(()=>{ pct.textContent=(++p)+'%'; if(p>=73)clearInterval(iv); },52);
-
+ 
 // Notify
 function notify(){
   const v=document.getElementById('emailInput').value;
